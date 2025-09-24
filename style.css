@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-break: break-word;
 }
 
 html {
@@ -525,6 +526,8 @@ footer {
 
   .nav-menu.active {
     left: 0;
+    z-index: -1;
+    top: 60px;
   }
 
   .nav-menu li {
@@ -551,6 +554,10 @@ footer {
 }
 
 @media (max-width: 576px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
   .section {
     padding: 60px 0;
   }
@@ -565,5 +572,9 @@ footer {
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .footer-content, .destination-grid, .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }
